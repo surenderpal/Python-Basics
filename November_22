@@ -1,0 +1,102 @@
+Pratice done on November 22,18
+# program to watch coco movie
+# # coco game
+name, age=input('Enter your name and age:').split(' ')
+age = int(age)
+if (name[0] == 'a' or 'A') and age >= 10: # compare character a or A
+    print('you can watch coco movie')
+else:
+    print('sorry, you can not watch coco')
+------------------------------------------------
+#----------Ticking price very with age using if elif else statement-----
+# show ticket price
+# 1 to 3 ==free
+# 4 to 10 == 150
+# 11 to 60 ==250
+# above 60 ==200
+
+age = int(input('Enter your age:'))
+if age == 0 or age < 0: # test condition that if age = 0 and if age < 0
+    print('First get birth and then watch')
+elif 0 < age <= 3:
+    print('you can watch for free')
+elif 4 <= age <= 10:
+    print('you can watch for Rs. 150')
+elif 11<= age <= 60:
+    print('you can watch for Rs. 250')
+else:
+    print('you can watch for Rs. 200')   
+--------------------------------------------------------------
+#--game to play game
+age = input('Enter your age:')
+desired_age= 14
+age = int(age)
+if age>= 14:
+    print('Contratulations !!you are eligible for playing game,As you are age is greater then desired age that is:'+ str(desired_age))
+    # pass # pass statement is used to pass the if block.
+else:
+    print('Sorry !!your age is less than desired age:'+str(desired_age)) 
+---------------------------------------------------------------
+#check string is empty or not 
+name= input('Enter your name:')
+if name:
+    print('hello '+name)
+else:
+    print("you did't entered any name")
+----------------------------------------------------------------
+#---enter no upto you want to sum
+total = 0
+n = int(input('Enter no upto you want the sum:'))
+i=1
+while i <= n:
+    total =total +i
+    i = i +1
+print(total)
+------------------------------------------------------------------
+#----program to print sum of entered number----
+n = input('Enter number to get sum:')
+total=0
+i=0
+while i<len(n):
+    total=total+int(n[i])
+    i=i+1
+print(total)
+------------------------------------------------------------------
+# in statement in if statement
+name='surender'
+print(name)
+if 'e' in name:
+    print("'e' is present in the entered name: passed")
+else:
+    print('sorry failed')
+------------------------------------------------------------------
+#--Number Guessing Game in python(using elif)----
+win_num = 420
+guess_num=int(input('Enter your Guess number:'))
+if guess_num == win_num:
+    print('Congratulations!!, you have guessed correct number')
+elif guess_num < win_num:
+    print('Sorry, You are too close')
+elif guess_num > win_num:
+    print('Sorry, you are too far')
+else:
+    print('Sorry, try again')      
+------------------------------------------------------------------
+#-----Number Guessing Game in python (using nested if else)
+win_num= 420
+guess_num = int(input('Enter your guess number:'))
+if guess_num == win_num:
+    print('Congratulation!! you win')
+else:
+     if guess_num < win_num:
+         print('sorry!! too close')
+     else:
+         print('sorry!! too far')  
+-------------------------------------------------------------------
+#-------And or Or operator in condition-----------
+name = 'surender'; age = 27
+if name == 'surender' or age ==29:
+    print('condition is True')
+else:
+    print('condition is False')
+--------------------------------------------------------------------
