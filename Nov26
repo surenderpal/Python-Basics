@@ -1,0 +1,50 @@
+#----Program to get sum of entered no.---------
+total =0
+n = input('Enter number to get sum of it:')# 345
+for i in range(0,len (n)):
+    total =total+int(n[i])
+print(total)
+#----------------------------------------------
+#--break and continue keyword.
+# 1 to 10 print
+for i in range(0,11):
+    print(i) 
+    if i == 5:
+        break
+    i = i +1
+#----------------------------------------------
+#conatinue statement
+# print 1 to 10 but doesn't print 5
+for i in range(1,11):
+    if i ==5 :
+        continue
+    print(i)
+#----------------------------------------------
+#---print entered character count in the table format
+name = input('Enter name and get character count:')
+temp = ""
+for i in range (0,len(name)):
+    if name[i] not in temp:
+        print(f"{name[i]}:{name.count(name[i])}")
+        temp = temp +name[i]
+#-----------------------------------------------
+# modify number game and it will print attempts
+# import random
+win_num = 23
+guess = 1
+num = int(input('Enter number to guess betwween 1 to 100:'))#123
+game_over = False
+
+while not game_over:
+    if num ==  win_num:
+            print(f'you win, and you gueessed no in {guess} times')
+            game_over = True
+    else:
+        if num < win_num:
+            print("too low ")
+            guess += 1
+            num = int(input("guess again : "))
+        else :
+            print("too high")
+            guess += 1
+            num = int(input("guess again : "))
