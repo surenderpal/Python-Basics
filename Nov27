@@ -1,0 +1,55 @@
+#----print the sum of entered no.
+total = 0
+num = input('Enter no to get the sum of Numbe:')
+for i in num:
+    total = total + int(i)
+print(total)    
+#--------------------------------------
+#---program to print each character count using for loop---
+name = input('Enter name:')
+for i in name:
+    print(i)
+#--------------------------------------
+#print the even no.
+n=int(input('Enter no upto you want to print the even NO:'))
+for i in range(0,n+2,2):
+    print(i)
+    i= i+1
+#--------------------------------------
+#----functions basics
+a = int(input('Enter first number:'))
+b = int(input('Enter second number:'))
+def addition(a,b):          # defining function using keyword def
+    return a + b            # Return keyword is used to get the sum, and it is returning the sum.
+total = addition(a,b)       # //Calling the function, storing the sum into total variable.
+print(f"sum of the entered two numbe is:{total}")                # printing the total
+# print(addition(a,b)) # second method to print the sum of the variable.
+#---------------------------------------
+#-----sting concatenation--------------
+fname=input('Enter first name:')
+lname=input('Enter second name:')
+def fullname(lname,fname):
+    return lname + fname
+username = fullname(lname.title(),fname)
+print(f"Hello !!{username}")
+#------------------------------------------------
+#program to show print vs return.
+a,b,c = input('Enter values for a, b, c:').split(',') # taking 3 inputs from user.
+def add_thrice(a,b,c):    # defining function add_thrice and it has three arguments
+   return (int(a)+int(b)+int(c)) # returning the sum of three no.
+thrice = add_thrice(a,b,c) # calling the function
+print(f"sum of entered three number is:{thrice}") # printing the function
+#-----------------------------------------------
+#---program to print the reveser.
+for i in range(10,0,-1):
+    print(i)
+#-----------------------------------------------
+# programm to print the last character of the string using function
+name= input('Enter your name:')
+def firstchar(char): # defining the function with firstchar function name.
+ return name[-1]
+fchar = firstchar(name) # calling the function
+print(f"First character of the entered name is:{fchar}") # printing the first character of the name.
+
+
+
