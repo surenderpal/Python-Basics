@@ -1,0 +1,54 @@
+#-------Programm to print last character of the entered string
+name=input('Enter your name:')
+def lastcharfunction(char):                     # function defination
+    return name[-1]
+last_char = lastcharfunction(name).upper()      # calling function
+print(f"the last character of the entered string is: {last_char}")
+#--------------------------------------------------------------
+#-----Program to print entered no is odd or even
+num= int(input('Enter number to confirm that no is odd or even:'))
+def odd_even_function(no):                          # function defination
+    if num%2 == 0:
+        return "and it is even number"
+    else:
+        return "and it is odd number"    
+result = odd_even_function(num)                     # calling the function
+print(f"your entered no is:{num}, {result}")
+#---------------------------------------------------------------
+#----function to compare the greater between two entered numbers---------
+a,b = input('Enter two numbers seprated by space:').split(' ')
+def greater(a,b):                               # function defination
+    if a > b:
+        return "First no is greater"
+    return "Second no is greater"
+result = greater(a,b)                           # calling a function
+print(f"{result}")     
+#----------------------------------------------------------------
+#---find the greatest number between three numbers----
+a,b,c = input('Enter three numbers followed by space:').split(' ')
+def thrice_greater(a,b,c):                      # defining function 
+    if int(a)>int(b) and int(a) > int(c):
+        return "First no is greater"
+    elif int(b)>int(c) and int(b) > int(a):
+        return   "Second no is greater"
+    return "Third no is greater"
+result = thrice_greater(a,b,c)                  # calling function
+print(f"{result}")
+#----------------------------------------------------------------
+#-----programm function inside the function-----
+#-----print greatest among the three numbers------
+a,b,c = input('Enter three numbers seprated by space:').split(' ')         # taking input from  user
+a = int(a)
+b = int(b)
+c = int(c)
+def greater_two(a,b):
+    if a > b:
+         return a 
+    return b 
+# result_two = greater_two(a,b)                                               # calling function 
+# print(f"{result_two}")
+def greater_three(a,b,c):                                                     # function greater three which is calling funciton 
+    among_two = greater_two(a,b)                                              # calling function greater_two  
+    return greater_two(among_two,c)                                           # again calling function greater_two  
+result = greater_three(a,b,c)
+print(f"Greatest among entered number is: {result}")
