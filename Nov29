@@ -1,0 +1,109 @@
+#---palindrome function----
+#---naman--true
+#---madam--true
+#---teacher--false
+name = input('Enter a string to confirm that entered keyword is palindrome:')
+
+reverse_string = name[::-1]         #reversing string using string slicing method
+# print(reverse_string) 
+def is_palindrome(name):            #declaring the function 
+    if name == reverse_string:
+        return "Palindrome"
+    return "Not Palindrome"    
+result = is_palindrome(name)        #calling the function
+print(f"Entered string is: {result}")    
+#--------------------------------------------------------------------------------
+#----Programm to print fibonacci series----------
+n=int(input('Enter how many fibonacci number you want to print:'))
+def fibonacci_function(n):
+    a= 0 # fibo first no.
+    b= 1 # fibo second no.
+    if n == 1:    # if user enter 1
+        print (a)  # it will print 0 
+    elif n == 2:  # if user enter 2
+        print (a, b)# it will print 0 1  
+    else:      
+        print(a,b, end = " ")
+        for i in range(n-2):
+            c = a + b       # c = 0 +1--1
+            a = b        # 0 = 1--->a = 1
+            b = c        # 1= 1-->1    
+            print(b, end = " ")
+result = fibonacci_function(n)
+#--------------------------------------------------------------------------------------
+#----default parameter function----
+# def user_info(fname,lname,age):# using as a general function
+def user_info(fname,lname='chutiya',age=30):# using as a general function    
+    print(f"your first name is: {fname}")
+    print(f"your last name is: {lname}")
+    print(f"your age is: {age}")
+user_info ('surender','pal',12) 
+#----------------------------------------------------------------------------------------
+#--------Scope of the variable inside or outside of the programm.
+#-----we can access global variable in the function, by using keyword global inside the function, but it is rarely used.
+a= 6                 # global variable
+def function1():
+   #variable declared inside the function is called local variable
+    global a         # accessing global variable
+    a = 9            # local variable
+    return a
+print(a)             # it will print 6
+print(function1() )  # print 9
+print(a)
+#-------------------------------------------------------------------------------------------
+#---list in python------
+#---list is a data structure, which is a collection of items.
+#---you can store anyting in the list like: integer, float, string
+first_list = [1,2,3,4,5,6,7,8,9]        # list is created by using close brackets"[]"
+print(first_list)
+second_list = ['surender','rahul','mansi','riya']
+print(second_list)
+mixed_lit = [1,2,3,4.0 ,5.2,'surender','pal','machine learning expert']
+print(mixed_lit)
+mixed_lit[1] = 'two' # changing the values in the list using index.
+print(f"edited the mixed list with first index with differet value and new list is below the line :\n{mixed_lit}") 
+mixed_lit[:1] = 'two' # changing value start with the 0 index and will go till teh vaule is 'two' and will follow the rest vaule that is in the list
+print(f"edited the mixed list by using index with differet value and new list is below the line :\n{mixed_lit}") 
+#------------------------------------------------------------------------------------------------
+#--some more methods to add items to the list
+#--insert method
+#--how to join(concatenation) two list
+#--extend method
+#--difference between append and extend method
+fruits = ['apple','mango']
+# print(fruits)
+fruits.append('pineapple')
+# print(fruits)
+#---insert method accepts two arguments first is index and second is value.
+fruits.insert(0,'inserting at the first pos') # inserting method insert item at particular index
+# print(fruits)
+fruits.insert(0,2)
+# print(fruits)
+exercise = [] # empty list that is in real programmin world
+exercise.append('chest')
+exercise.append('back')
+# print(exercise)
+# body= fruits + exercise
+# print(body)
+print(fruits)
+# fruits.extend(exercise) # extend method extends item list inside the list without creating the list inside the list
+# print(fruits)
+# print(exercise)
+fruits.append(exercise)
+print(fruits)
+#-------------------------------------------------------------------------------------------
+#---adding items to the list--------
+#---
+fruits=['apple','mango','strawberry','watermaleon']
+# print(fruits)
+# fruits.append('papaya')
+# print(fruits)
+exercise = [] # empty list that is in real programmin world
+exercise.append('chest')
+exercise.append('back')
+# print(exercise)
+exercise.append('shoulder')
+print(exercise)
+
+
+
