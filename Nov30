@@ -1,0 +1,47 @@
+#----common method to delete data from list
+#---pop method,del method, remove method
+fruit=['apple','banana','lichi','kiwi','mango','cheku','apple'] 
+print(f"before poping string:\n{fruit}")
+# fruit.pop(2)
+# print(f"after poping string: {fruit}")
+# del fruit[0] # delete method 
+# print(f"deleting 0 index item from the list: {fruit}")
+# del fruit[1] #del method treats argument as index of list
+# print(f"deleting item from the list: {fruit}")
+fruit.remove('apple')
+print(f"Removing item from the list:\n{fruit}")
+# fruit.remove('kela')
+#-------------------------------------------------------
+#-----more list method----
+#--count method
+#--sort method
+#--sorted function
+#--reverse method
+#--clear method
+#--copy method
+fruit=['apple','banana','lichi','kiwi','mango','cheku','apple']
+count=fruit.count('blackberry') # count method 
+print(count)
+sort = fruit.sort()
+print(fruit) # The sort() method sorts the list ascending by default.
+num = [1,20,23,466,42,2,4,5,3,2]
+num.sort()          # sorting the num is ascending order
+print(num)
+print(sorted(num))
+print(num)
+num_copy = num.copy()
+num.clear()             # Remove all items from the list
+print(num)
+print(num)
+print(num_copy)
+#-------------------------------------------------------
+#---in keyword with list---
+#---how to verify that particulat item is inside the list
+#---task take an input fruit name and then check that it is present or not.
+fruit=['apple','banana','lichi','kiwi','mango','cheku','apple']
+print(f"Initialized list:\n{fruit}")
+if 'laddu' in fruit:
+    print('Present')
+else:
+    print('Absent')       
+    
