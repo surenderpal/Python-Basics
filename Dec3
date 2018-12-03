@@ -62,5 +62,60 @@ while i > len(fruit):
     print(fruit[i])
     i = i + 1
 #--------------------------------------------------------------------------------------
+Exercises------
+#exercise starts here
+# Generate list with range function
+# Something more about pop method
+# Index method
+# Pass list to a function
+# numbers = list(range(1,11))     # Range function is being used to generate the list
+numbers = [1,2,3,4,5,6,7,8,9,10]
+# print(numbers)
+poped_item = numbers.pop()      # Pop method also return poped item from the list
+# print(poped_item)
+# print(numbers)
+list_index = numbers.index(3)   # Index method will return the index of item in the list   
+# print(list_index)
+# print(numbers)
+# print(f"using indesxing:{numbers.index(2)}")
+# print(numbers.index(1,14,20))    #Index method will start searching from the index 0, and it take three arguments "value, start position and end position"
+#-----------Passing List inside the function as argument------------
+def negaive_list(l):
+    negative = []
+    for i in l:
+        negative.append(-i)
+    return negative
+
+print(negaive_list(numbers))
+#--------------------------------------------------------------------------------------
+#---programm that will take input list and will give you the square of the numbers inside the list-----
+numbers = [1,2,3,4,5,6,7,8,9,10]
+def square_list_fun(l):
+    square_new_list = []        # empty list for square
+    for i in l:
+        square_new_list.append(i**2)  # Appending square in the new list
+    return square_new_list
+print(square_list_fun(numbers))
+#--------------------------------------------------------------------------------------
+#---program to print the item in reverse inside the list------
+numbers=[1,2,3,4,5,6]      # list1
+#----1st method-------------------
+# def reverse_list(l):
+#      l.reverse()
+#      return l 
+# print(reverse_list(numbers))
+#----2nd method--------------------
+# def reverse_list(l):
+#    return l[::-1]
+# print(reverse_list(numbers))
+#-----3rd method-------------------
+def reverse_list(l):
+    r_list = []
+    for i in range(len(l)):
+        poped_item = l.pop()    # poping item from list
+        r_list.append(poped_item)   # appending item to the list
+    return r_list
+print(reverse_list(numbers))
+
 
 
