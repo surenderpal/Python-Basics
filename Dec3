@@ -116,6 +116,15 @@ def reverse_list(l):
         r_list.append(poped_item)   # appending item to the list
     return r_list
 print(reverse_list(numbers))
-
+#--------------------------------------------------------------------------------------
+#---program to reverse item in the list---
+def reverse_element(l):
+    elements = []
+    for i in l:
+        elements.append(i[::-1])
+    return elements
+words = ['surender','kumar','pal']
+reversed_list = reverse_element(words)
+print(reversed_list)
 
 
