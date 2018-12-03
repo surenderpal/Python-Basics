@@ -1,0 +1,66 @@
+# comparing list in python (==)
+# comparing list is python (is keyword)
+fruit=['apple','mango','banana']
+fruits=['apple','mango','banana']
+print(fruit == fruits) #== checks that values inside the list are equal or not
+print(fruit is fruits)      # Is keyword checks that both list are in the same memory place or 
+#---------------------------------------------------------------------------------
+# List inside list is known as 2-D list
+# 3 list inside the list is known as 3-D list
+matrix = [[1,2,3],[4,5,6],[7,8,9]] # 3 items in the list
+print(matrix[1])
+# for loop inside the nested list
+for sublist in matrix:
+    for i in sublist:
+        print(i)
+print(matrix[2][0])
+# Type function is used to check which type of data do we have.
+print(type(matrix))
+#-------------------------------------------------------------------------------------
+# split method
+# convert string to list
+# join method
+# convert list so string
+# user_info = 'surender,pal'.split(',')   # split mehtod will convert string into the list.
+# print(user_info)
+user_info = ['surender','pal','24'] # list:-User info
+print(','.join(user_info))          # conveting list into the string using Join method.
+#--------------------------------------------------------------------------------------
+# List vs Array
+# Array: Ordered collection of item
+# array: Can stroe only one data type in array like int, string, float, boolean
+# List : Can store any data.
+# Array Module : Python has an array module , module provide function,
+# Array Module : We can store fixed data type in array module.
+# Numpy Arrays : Used for calculation in data science instead of normal array.
+# Numpy Arrays : It has better performance, it is binding in C language.
+#--------------------------------------------------------------------------------------
+# List Vs String
+# Strings are immutable
+# Lists are mutable
+# We can't commit changes('Add/Delete') in the already declared string.
+s = 'surender'      # Immutable means we can't change our string,
+t = s.title()
+print(t)
+
+# In list we can commit change to the already declared list, we can (add/delete) item to the list
+l = ['surender','kumar','pal']
+print(l)
+l.pop()             # Pop method will commit change is our original list and remove the last item from the list.
+print(l)
+l.append('23')      # appending in the list
+print(l)
+#--------------------------------------------------------------------------------------
+# Lopping with the list
+fruit =['orange','apple','pear','banana','kiwi']
+# for loop with list
+for i in fruit:
+    print(i)
+# While loop with list
+i = 0               # First position in list is Zero(0), that's why we assing 0 to the i
+while i > len(fruit):
+    print(fruit[i])
+    i = i + 1
+#--------------------------------------------------------------------------------------
+
+
