@@ -1,0 +1,44 @@
+# take input as two list and compare the item and return the comman item from both the list
+num1 = [1,2,3,5,6,7,8]
+num2 = [1,2,35,6,9,0,10]
+def compare_list(l1,l2):
+    num3 = [] # comman item in list
+    for i in l1:
+        if i in l2:
+            num3.append(i) 
+    return num3
+print(compare_list(num1,num2))
+#----------------------------------------------------------------
+# min and max function
+num= [1,2,3,4,5,6,7,8,9,10]
+def difference_min_max(num):
+    min_num = min(num)
+    max_num = max(num)
+    output = max_num - min_num
+    return output
+print(difference_min_max(num))
+#----------------------------------------------------------------
+#--program will return the nested list count using function---
+l1 = [1,2,3,['surender','pal'],['rahul']]
+def sublist_count(l):
+    count = 0
+    for i in l:
+        if type(i) == list:
+            count += 1
+    return count
+print(sublist_count(l1))
+#----------------------------------------------------------------
+#----program will take list an an input and it will return two list comprising of odd/even list--
+num = [1,2,3,4,5,6,7,8,9] # input list
+def odd_even_fun(l):
+    odd_l = []
+    even_l = []
+    for i in l:
+        if (i % 2 == 0):
+            even_l.append(i)
+        else:
+            odd_l.append(i) 
+    output = [odd_l,even_l]
+    return output        
+print(odd_even_fun(num))           
+  
