@@ -1,0 +1,136 @@
+#---using import module to use the sys.exit()---
+import sys
+
+while True:
+    x = input("Type exit to exit the program:")
+    if x == 'exit':
+        sys.exit()
+        print('you typed'+"x")
+#-------------------------------------------
+#---Tuple data structure---
+#---Tuple can store any data type
+#---Most important tuples are immutable, once tuple is created you can't update.
+#---data inside tuple
+#---no append, no pop, no insert, no remove
+#---we do not use square bracket, use paranthesis
+example = ('one','two','three')
+#---Tuple is used when we know that our data is not going to change.
+days = ('moday','tuesday','Wednesday')
+#---Tuples are faster than lists.
+#---methods in tuples--
+# count, index, len function, slicing tuples[:2]
+# print(example[0:2])
+example[0]=1
+print(example)
+#-------------------------------------------
+#--looping is tuples
+#--tuple with one element
+#--tuple withour parenthesis
+#--tuple unpacking
+#--list insdie tuple
+#--some functions that you can use with tuples
+mixed = (1,2,3,4,5.1,)
+print(mixed)
+# for i in mixed:
+#     print (i)
+#---tuple with one element
+num= (2,)
+word=('surender',)
+# print(type(name))
+
+#---tuple without paranthesis
+name = 'surender','rahul','mansi','deepika'
+# print(type(name))
+
+#---tuple unpacking--
+names = ('ram','shyam','gopal')
+name1,name2,name3 = (names)
+# print(name2,name3,name1)
+
+#---list insdie tuples---
+bookmarks = 'east','west','north','south','south-west',[1,2,3,'surender','pal']
+# print(bookmarks)
+# print(bookmarks[5].pop())
+# print(bookmarks[5].append('kumar'))
+
+# print(bookmarks)
+
+#---min(),max() and sum() functions inside the tuples
+# print(min(mixed))
+# print(max(mixed))
+def min_plus_max(num):
+    a= min(mixed)
+    b= max(mixed)
+    result=min(mixed) + max(mixed)
+    return result
+print(min_plus_max(mixed))    
+#-------------------------------------------
+#---function returning two values
+#---program that retune two values like addition and multiplication
+def sum_mul(num1,num2):
+    add = num1 + num2
+    mul = num1 * num2
+    return add, mul
+sume, mule = sum_mul(2,4)
+print(sume)
+print(mule)
+#-------------------------------------------
+#--something more about tuples, list and str
+#--declaring tuple using range function
+# nums = tuple(range(1,11))
+# print(type(nums))
+# print(nums)
+#---converting tuple into the list using list function
+nums= list((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+# nums= list(range(1,11))
+print(nums)
+print(type(nums))
+#---declaring str using range function
+nums= str((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+print(nums)
+print(type(nums))
+#-------------------------------------------
+# Dictionaries intro
+# Q-Why we use dictionaries?
+# A- Because of limitation of lists, lists are not enough to represent real time data
+user=['surender',27,['protein','shakes','Bpi'],['exercise','data science','machine learing'],'IOT']
+# this list contain user name, age, drinking items, workout, dreams, career
+# print(user)
+# Q-What are dictionaries?
+# A-Unordered collections of data in Key : value pair.
+
+# how to create dictionaries
+# We create dictionaries using curley braces.
+#---First method to create dictionary
+# user ={'name':'surender','age':24,'drinking items':'protein,shakes,Bpi','workout':'exercise','dreams':'Machine learing,IOT'}
+# print(user)
+# print(type(user))
+#---second method to create dictionary.
+user = dict(name = 'surender',age= 24, drinking_items = 'protein,shakes,Bpi',workout='exercise')
+# print(user)
+
+# print(type(user))
+#--How to access data from dictionary
+# print(user[0])
+# Note--There is no indexing in dictionary, because of unordered collection of data.
+# print(user['name'])
+# print(user['age'])
+#---Q-which type of data a dictionary can store?
+#---A-anything.
+user_info={
+    'name': 'surender',
+    'last_Name': 'Pal',
+    'age': 26,
+    'drinking_item': ['lassi','milk'],
+    'eating_item': ['chicken,eggs,wheat,oats'],
+    'workout': 'cardio',
+    'career' : 'IOT,Machine Learning',
+    'leaving_style' : 'simple',
+}
+# print(user_info)
+#---How to add data to empty dictionary?
+user_info2={}
+user_info2['name']='surender'
+user_info2['age']=27
+print(user_info2)
+
