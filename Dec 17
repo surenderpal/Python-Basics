@@ -1,0 +1,10 @@
+#more about get, two same key in the dictionaries
+user={'name':'surender','age':27,'age':34}
+# print(user.get('name')) # get method is used to get the vaule of the key
+#by default if get method is unable to find the key then it will return NONe
+# print(user.get('sex','Not found!!!')) # if argument is passed inside the paranthesis then it will print second argument as message.
+print(user)
+print(user.get('age'))
+print(user)
+# if in dictionary, there are two identical key then last key overwrite the first key.
+#-------------------------------------------------------------------------------------------------------------------------------------
