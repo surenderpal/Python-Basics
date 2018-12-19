@@ -1,0 +1,41 @@
+# set data type ---we can't store list and dictionary in the set
+# unordered collection of unique items
+
+# how to create set
+s={1,2,3,3,3,4,3,3,3} 
+print(f"set as declared: {s}")
+# print(s)        # it will print set with unique value duplicate value will not repeat itself when user print the set.
+
+l =[1,2,3,4,4,4,4,4,7,55,5,5,6,6,67,8,98,70,10]     # suppose list has multiple duplicate value and you have to remove the duplicate value then you can use the set function to remove the duplicate value from the list and then again convert the set to the list using list function.
+# print(type(l))
+# print(type(list(set(l))))
+
+# add value to the set
+s.add(3)        # if set already has same value in the set and user add same value to the set than it will not add same value to the set.
+# print(f"set after adding same/existing value to the set: {s}")
+s.add(5)
+# print(f"set after adding distinct value to the set: {s}")
+s.add('surender')
+s.add(23)
+s.add(33)
+s.add(235312)
+s.add(231532)
+# print(f"set after adding distinct value to the set: {s}")
+
+# remove value from the set
+s.remove(4)     # remove method will remove the value from the set but it should be a member of set
+# print(removed_item)
+print(f"set after removing value to the set: {s}:")
+s.remove(2) # remove method will through error if value not in the set
+print(f"set after removing value to the set: {s}:")
+s.discard(9) # it will remove the element it is in the set if not in the list will not through error.
+print(f"set after removing value to the set: {s}:")
+
+# clear method --it will clear the set
+# s.clear()
+print(s)
+
+#copy method -- it will create a copy of the set
+s1 = s.copy()
+s.clear()
+print(f"s set is cleared and  \n{s1}")
