@@ -1,0 +1,15 @@
+# program to count the character of entered word
+def word_counter(s):
+    counter = {}
+    for char in s:
+        counter[char] = s.count(char)
+    return counter
+print(word_counter('surener'))
+#--------------------------------------------
+# program to define a function and it will take input a number and print it's cube.
+def cube_num(num):
+    cubes={}
+    for i in range(1,num+1):
+        cubes[i] = i**3
+    return cubes
+print(cube_num(6))
