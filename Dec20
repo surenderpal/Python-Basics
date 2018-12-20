@@ -1,0 +1,128 @@
+# list comprehensive
+# with the help of list comprehension we can create list in one line
+
+# create a list of square from 1 to 10
+
+# squarel = []
+# for i in range(1,11):
+#     squarel.append(i**2)
+# print(squarel)    
+
+# list comprehension
+square2 = [i**2 for i in range(1,11)]
+# print(square2)
+
+negative=[]
+# for i in range(1,11,-1):
+for i in range(1,11):    
+    negative.append(-i)
+print(negative)
+
+# list comprehenion
+# negative_list = [-i for i in range(11,0,-1)]
+# print(negative_list)
+
+names =['surender','rahul','upika']
+new_names = []
+for i in names:
+    new_names.append(i[0])
+# print(new_names)
+
+# list comprehension
+
+new_names1 = [i[0] for i in names]
+print(new_names1)
+
+#----------------------------------------------------------------------
+# define a function that take list of strings
+# list containg reverse of every string
+# surender
+
+l =['surender','rahul','upika','Deepika']
+reverse_l = []
+def reverse_name(l):
+    reverse_name_list = []
+    for name_char in l:
+        reverse_name_list.append(name_char[::-1])
+        revesed_name = reverse_name_list.reverse()
+    return reverse_name_list
+print(reverse_name(l))
+
+# list comprehension
+def reverse_name(l):
+    return[name_char[::-1] for name_char in l]
+print(reverse_name(l))
+#----------------------# function that will return a list with all input variable and output as int or float
+intorfloar = []
+#  strtype = []
+def num_or_string(l):
+    intorfloar = [str(i) for i in l if (type(i) == float or type(i) == int)]
+    return intorfloar
+    strtype = [str(i) for i in l if (type(i)==str)]
+    return strtype
+print(num_or_string([1,2,3,2.42,0.23,'surender','#']))
+print(num_or_string([1,2,3,2.42,0.23,'surender','#']))
+h if statement
+
+# num = list(range(1,11))
+# print(f"complete list is:{num}")
+evenList = []
+oddList = []
+# for i in num:
+#     if i % 2 == 0:
+#         evenList.append(i)
+#     else:
+#         oddList.append(i)
+# print(f"even list is: {evenList},\nand odd list is {oddList}")
+# list comprehension
+
+# even_list = [i for i in num if i%2 == 0]
+# print(f"event list using list comprehension: {even_list}")
+even_list1 = [i for i in range(1,50) if i%2==0]
+print(f"even list using list comprehension without declaring list above:\n {even_list1}")
+oddList1 = [i for i in range(1,50) if i%2 !=0]
+print(f"odd list using list comprehension without declaring list above:\n {oddList1}")
+#----------------------------------------------------------------------
+# function that will return a list with all input variable and output as int or float
+intorfloar = []
+#  strtype = []
+def num_or_string(l):
+    intorfloar = [str(i) for i in l if (type(i) == float or type(i) == int)]
+    return intorfloar
+    strtype = [str(i) for i in l if (type(i)==str)]
+    return strtype
+print(num_or_string([1,2,3,2.42,0.23,'surender','#']))
+print(num_or_string([1,2,3,2.42,0.23,'surender','#']))
+#----------------------------------------------------------------------
+# list comprehension in nested list
+example = [[1,2,3],[1,2,3],[1,2,3]]
+nested_list = [[i for i in range(1,4)]for j in range(3)]
+print(nested_list)
+#----------------------------------------------------------------------
+# list comprehension with if else
+l = [1,2,3,4,5,6,7,8,9,10]
+mixed_list = []
+for i in l:
+    if i % 2 !=0:
+        mixed_list.append(-i)
+    else:
+        mixed_list.append(i*2)
+print(l)            # default list
+print(mixed_list)   # output list
+
+# list comprehension
+mixed_list1 = [(-i) if (i%2!=0) else i*2 for i in l]
+print(mixed_list1)
+#----------------------------------------------------------------------
+# Dictionary comprehensioin
+# square = {1:1, 2:4, 3:9 ...10:100}
+# square = {num:num**2 for num in range(1,11)}
+# print(square)
+square = {f"square of {num} is ":num**2 for num in range(1,11)}
+# print(square)
+for item,value in square.items():
+     print(f"square of {item} is :{value}")
+
+
+
+
