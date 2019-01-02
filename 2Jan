@@ -1,0 +1,68 @@
+# When you want to change every value in the iterator or in the function, we use MAP function
+# map(func,iterables)
+numbers=[1,2,3,4,5,6]
+def square(l):
+    return l**2
+# print(square(4))
+# map function using lamda expression
+map_fun = list(map(lambda a : a **2,numbers))
+print(map_fun)
+
+# list comprehension
+square_new = [i**2 for i in numbers]
+print(square_new)
+
+# without using list comprehension and map function
+new_list = []
+for num in numbers:
+    new_list.append(square(num))
+print(new_list)
+
+names = ['abc','abcd','surender']
+len_count = list(map(lambda s : len(s),names))
+print(len_count)
+print(type(len_count))
+#-------------------------------------------------------------------------------------------------------------
+# filter function 
+num = [1,2,3,4,5,6,7,8,9,10]
+def is_even(a):
+    return a%2 ==0
+print(is_even(4))
+# filtering all even numbers from the list
+is_even1 = tuple(filter(lambda a : a%2 == 0,num))
+print(is_even1)
+for i in is_even1:
+    print(i)
+# you can iterate only once map, tuple or reduce but you can iterate multiple time list,tuple, dictionary
+#-------------------------------------------------------------------------------------------------------------
+# iterator vs iterables
+numbers = [1,2,3,4,5] # list,string,tuples, dictionary are iterables
+squares = list(map(lambda n : n **2,numbers))
+print(squares)
+# for i in numbers:
+    # print(i)
+
+num_iter = iter(numbers)
+print(next(num_iter))
+#-------------------------------------------------------------------------------------------------------------
+# Zip function
+# zip function will zip list,tuple and dict 
+# zip function will zip to the same count of list.
+
+user_id = ['user1','user2','user3']
+user_names =['surender','rahul','Deepika']
+last_names = ['pal','Pal','Kumari']
+print(list(zip(user_id,user_names,last_names)))
+#-------------------------------------------------------------------------------------------------------------
+l1 = [1,2,3,4,5]
+l2 = [2,4,6,8,10]
+l=[(1,2),(2,4),(3,6),(4,8),(5,10)]
+# * operator with Zip
+# zip(*l) ---> list unpacking
+l1,l2 = list(zip(*l))
+# print(list(l1))
+# print(list(l2))
+new_list = []
+for pair in zip(l1,l2):
+    new_list.append(max(pair))
+print(new_list)
