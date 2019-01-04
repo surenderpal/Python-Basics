@@ -1,0 +1,66 @@
+# Define a function that will take n argument and will give sum of that.
+def n_sum(*args):
+    if all([(type(arg)==int or type(arg)==float) for arg in args]):
+        total = 0
+        for sum in args:
+            total+=sum
+        return total
+    else:
+        return "Wrong Input!!"
+print(n_sum(2,3,4,5,23.42))
+
+#-----------------------------------------------------------------------------------------------------
+# advance Min() and max() function
+
+numbers =[1,2,3,4,5,65,6,236.56734]
+print(max(numbers))
+print(min(numbers))
+names = ['surender kumar pal','rahul','mansi']
+print(min(names))
+# print(min(names))
+# print(max(names))
+print(max(names,key= lambda item: len(item)))       # printing max name using len function by lamda expression
+student ={
+    'Surender':{'score':90,'age':27},
+    'Rahul':{'score':95,'age':25},
+    'mansi':{'score':30,'age':19}
+}
+
+student2 =[
+    {'name':'surender','score':90,'age':27},
+    {'name': 'rahul','score':95,'age':25},
+    {'name': 'mansi','score':30,'age':19}
+]
+# print(max(student2,key=lambda item: item.get('age'))['name'])
+print(max(student,key=lambda item:student[item]['age']))
+#-----------------------------------------------------------------------------------------------------
+# Advance sorted function
+fruits = ['grapes','mango','apple']     # list
+fruits.sort()                   # Sort method in list
+print(fruits)
+fruits2 = ('grapes','mango','apple')    # tuple
+print(sorted(fruits2))          # tuple function uses sorted method, it will sort the list but retun list not  tuple 
+fruits3 ={'grapes','mango','apple'}     # sets
+print(sorted(fruits3))          # set function uses sorted method to sort the set and will return the list not set 
+
+gym = [
+    {'Golds':'advance','fees':40000},
+    {'The Gym':'intermediate','fees':30000},
+    {'Top Body':'Old School','fees':6000},
+    {'Defence':'latest','fees':10000000}
+]
+sorted_guitors=sorted(gym,key=lambda d:d['fees'],reverse=True)
+print(sorted_guitors)
+#-----------------------------------------------------------------------------------------------------
+# what are doc strings
+# how to write the docstring
+# how to see docstring
+# what is help function
+def add(a,b):
+    ''' this function take 2 argument and will return the sum of argument '''
+    return a+b
+print(add(2,3))
+print(add.__doc__)  # to view the docstring function name add dot(.)and then use double underscore then doc keyword and then again double underscore
+print(len.__doc__)
+print(help(sum))
+
