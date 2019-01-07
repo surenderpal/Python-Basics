@@ -1,0 +1,45 @@
+# function returning function.
+def outer_funct():
+    def inner_func():
+        print('Hello User!!')
+    return inner_func # outer function only returning inner function not calling the inner function.
+# var= outer_funct()
+# var()       # calling inner function
+
+def outer_func2(msg):
+    def inner_func2():
+        print(f'hello {msg} user')
+    return inner_func2
+var2 =outer_func2('pagal')
+var2()
+
+#---------------------------------------------------------------------------------------------------------------------------
+# function returning function(closure) pratice
+def to_power(x):
+    def calc_power(num):
+        return num**x
+    return calc_power
+square = to_power(2)
+print(square(5))
+
+#---------------------------------------------------------------------------------------------------------------------------
+# Decorators -- it enhance the functionality of other functions.
+# syntactic symbol(@) : @ used for decorator # syntactic suger
+def decorator_func(any_function):       # Defining Decorator(outer) function
+    def wrapper_fun():                  # Defining Wrapper(inner) function
+        print('This is enhancement in the already declared function-Awesome') # Adding enhancement to already existing function
+        any_function()                  # calling already existing function
+    return wrapper_fun                  # Decorator(outer) func is returning Wrapper(inner) function but not calling
+# any function declaration
+@decorator_func                         # syntactinc sugar or it is short cut
+def function1():                        # Defining function 1
+    print('This is function 1')         # function 1 body
+function1()
+@decorator_func
+def function2():                        # Defining function 2
+    print('This is function 2')         # function 2 body
+function2()
+var = decorator_func(function1)         # Assigning decorator function to a variable
+var()                                   # calling decaorator function
+
+#----------------------------------------------------------------------------------------------------------------------------
